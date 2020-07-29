@@ -18,13 +18,6 @@ ActiveRecord::Schema.define(version: 3) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "software", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "software_categories", force: :cascade do |t|
     t.integer "software_id"
     t.integer "category_id"
@@ -32,6 +25,13 @@ ActiveRecord::Schema.define(version: 3) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_software_categories_on_category_id"
     t.index ["software_id"], name: "index_software_categories_on_software_id"
+  end
+
+  create_table "softwares", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

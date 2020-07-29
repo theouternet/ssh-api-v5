@@ -1,6 +1,6 @@
-class CreateSoftware < ActiveRecord::Migration[6.0]
+class CreateSoftwares < ActiveRecord::Migration[6.0]
     def change
-        create_table :software do |t|
+        create_table :softwares do |t|
             t.string :name
             t.string :description
 
