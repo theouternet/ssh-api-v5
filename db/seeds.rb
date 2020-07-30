@@ -8,10 +8,13 @@
 
 
 
-categories = Category.create([{ category_name: 'Accounting' }, { category_name: 'Music' }])
+categories = Category.create([{ category_name: 'Accounting' }, { category_name: 'Music' }, { category_name: 'Design' }, { category_name: 'Statistics' }, { category_name: 'Spreadsheets' }])
 
 Software.create(software_name: 'Quicken', category: categories.first)
 Software.create(software_name: 'Cakewalk', category: categories.second)
+Software.create(software_name: 'InDesign', category: categories.third)
+Software.create(software_name: 'SPSS', category: categories.fourth)
+Software.create(software_name: 'Excel', category: categories.fifth)
 
 
 
