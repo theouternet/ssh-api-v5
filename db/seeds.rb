@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-software_list = [
-  ["Quicken", "Do taxes.", "Accounting"],
-  ["Cakewalk", "Make music.", "Recording"],
-  ["InDesign", "Edit the paper.", "Editing"],
-]
 
-software_list.each do |n, d, c|
-   software = Software.create!(name: n, description: d)
-    software.category!(name: c)
-  end
+
+categories = Category.create([{ category_name: 'Accounting' }, { category_name: 'Music' }])
+
+Software.create(software_name: 'Quicken', category: categories.first)
+Software.create(software_name: 'Cakewalk', category: categories.second)
+
+
+
+

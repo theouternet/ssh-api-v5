@@ -1,8 +1,8 @@
 class Software < ApplicationRecord
-    has_many :software_categories
-    has_many :categories, through: :software_categories
+    belongs_to :category
+    
 
-    validates :name, presence: true
+    validates :software_name, presence: true
     validates :description, presence: true
 
 end
